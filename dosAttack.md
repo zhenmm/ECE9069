@@ -144,7 +144,9 @@ while True:
 
 This tool successfully avoids caching by attacking the server directly with unique packets. HULK makes each request unique, unlike many other tool that transmit packets in a predictable pattern, making the attack easier to detect and halt. This program also allows you to securely carry out the  attack while maintaining control to stop it at any point.Now we are attak an ip address, using wireshark to monitor the traffic, there are continuity of packets sending to the source IP. [5]
 
-[Hulk through the Repo](https://github.com/grafov/hulk)
+[Get Hulk through the Repo](https://github.com/grafov/hulk)
+
+[Video DoS/DDoS attack tutorial](https://www.youtube.com/watch?v=fGWkhmCp_js&t=117s)
 
 ![This is an image](hulk-tool.png)
 
