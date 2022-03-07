@@ -31,11 +31,11 @@ This is the most common form of DoS attack. A buffer overflow type of attack can
 
 By saturating a targeted server with an overwhelming amount of packets, a malicious actor is able to oversaturate server capacity, resulting in denial-of-service. 
 
-- ICMP Floods
+- ICMP (Internet Control Message Protocol) Floods 
 
 Also called smurf or ping attacks. It focus on exploiting misconfigured network devices. In these attacks, attackers send spoofed packets or the false IP addresses that pings every computer on the targeted network. The network will face a surge in traffic, the system becomes flooded with responses from the malicious packet.
 
-- SYN Floods
+- SYN Floods (half-open attack) 
 
 This type of folld attack exploits the Transmission Control Protocol (TCP) handshake, which is used for the TCP network to create a connection with a local host/server. In a SYN flood, a connection request to a server, but the handshake will be left imcomplete. These requests keep the host in an occupied status. Legitimate users will be prevented from connecting to the network when all the ports are saturated. Below is an illustration of TCP handshake.[1]
 
