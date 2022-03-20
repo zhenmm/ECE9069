@@ -150,4 +150,4 @@ The second phase of this two-part patch rollout relates to a settings change to 
 
 [5]: How to manage the changes in Netlogon secure channel connections associated with CVE-2020-1472 [Link](https://support.microsoft.com/en-us/topic/how-to-manage-the-changes-in-netlogon-secure-channel-connections-associated-with-cve-2020-1472-f7e8cc17-0309-1d6a-304e-5ba73cd1a11e)
 
-[6]: Zerologon (CVE-2020-1472): An Unauthenticated Privilege Escalation to Full Domain Privileges: [Link]:(https://www.crowdstrike.com/blog/cve-2020-1472-zerologon-security-advisory/}
+[6]: Zerologon (CVE-2020-1472): An Unauthenticated Privilege Escalation to Full Domain Privileges: [Link](https://www.crowdstrike.com/blog/cve-2020-1472-zerologon-security-advisory/)
