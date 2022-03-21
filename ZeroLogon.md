@@ -96,6 +96,8 @@ The computer account password has a maximum validity period of 30 days by defaul
 
 When a computer account's password is changed, several events are recorded in the Security event log. The first is an event with EventID 4742 'A computer account was changed,' which has a TargetUserName equal to the domain controller account's name and PasswordLastSet set to the date the password was changed. This event indicates that the domain controller computer account's password has been changed.
 
+The System event log also contains another  event with EventID 5823 — ‘The system successfully changed its password on the domain controller.’. This event means that the computer account has been legitimately changed by the system, demonstrated on the right graph.
+
 When a legitimate password change is performed for a domain controller account, two events are generated: 5823 and [4742](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4742). When using Zerologon, however, event 5823 is not recorded in the event log.
 
 Thus, the logic of detection can be viewed from this angle. We previously stated that brute force is the first stage of exploitation. As a result, detecting both [5805](https://kb.eventtracker.com/evtpass/evtpages/EventId_5805_NetLogon_47953.asp) and 4742 events on the same domain controller within one minute indicates that Zerologon has been successfully exploited.
@@ -106,7 +108,7 @@ when both of (EventID = ‘4742’ AND TargetUserName IN “Domain_Controller_Ac
 ![alt text](d3-1.png)
 ![alt text](d3-2.png)
 
-## Detecting artifacts in the LSASS address space
+## Detecting exploitation based on network traffic
 
 The first step in exploiting the vulnerability is to send a *ClientChallenge* with a zero key value to bypass authentication. In practise, it takes at least ten attempts to bypass the authentication mechanism. This anomaly can be easily detected in network traffic. The RPC protocol is used to send ServerChallenge requests to the interface via the NetrServerReqChallenge method and attempts to authenticate via the NetrServerAuthenticate method with a zero ClientChallenge value.
 
